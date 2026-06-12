@@ -23,21 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Mostrar archivos
-        run: |
-          pwd
-          ls -R
-
-      - name: Diagnóstico Python
-        run: |
-          python --version
-          python -c "import os; print(os.getcwd())"
-          python -c "import imc; print('Importación correcta')"
-
-      - name: Probar importación
-        run: |
-          python -c "from imc import calcular_imc; print(calcular_imc(70,1.75))"
-
       - name: Ejecutar pruebas
         run: |
           PYTHONPATH=. pytest
