@@ -40,4 +40,4 @@ jobs:
 
       - name: Ejecutar pruebas
         run: |
-          pytest
+          PYTHONPATH=. pytest
