@@ -28,6 +28,12 @@ jobs:
           pwd
           ls -R
 
+      - name: Diagnóstico Python
+        run: |
+          python --version
+          python -c "import os; print(os.getcwd())"
+          python -c "import imc; print('Importación correcta')"
+
       - name: Ejecutar pruebas
         run: |
           pytest
