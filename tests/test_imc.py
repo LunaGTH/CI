@@ -1,10 +1,6 @@
 import pytest
 from imc import calcular_imc
 
-#def test_imc_correcto():
-    #assert calcular_imc(70, 1.75) == 30
-
-
 def test_imc_correcto():
     assert calcular_imc(70, 1.75) == pytest.approx(22.86, 0.01)
 
